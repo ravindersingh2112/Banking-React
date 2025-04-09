@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Toast from "./Toast";
 import {Toaster, toast} from "sonner";
+import Navbar from "./NavBar";
 const CreateUser = () => {
   const [formData, setFormData] = useState({
     id: "",
@@ -10,15 +11,13 @@ const CreateUser = () => {
   });
 
   const [responseMessage, setResponseMessage] = useState("");
-  const token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYXZpIiwiaWF0IjoxNzQzNzYxNzQ5LCJleHAiOjE3NDM3NjUzNDl9.l1tuFDJqS9hvu70EDejqo2mRdb_oPNvF4o4kjgsPTdo";
-
+  const token = sessionStorage.getItem("token");
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     fetch("http://localhost:8080/user/create", {
       method: "POST",
       headers: {
@@ -52,7 +51,11 @@ const CreateUser = () => {
 
   return (
     <>
+    <Navbar></Navbar>
     <Toast/>
+    
+    <div style={{ marginTop: "80px" }}>
+      <h2>Create User </h2>
       <form onSubmit={handleSubmit}>
         <label>Id:</label>{" "}
         <input
@@ -99,6 +102,7 @@ const CreateUser = () => {
 
         {responseMessage && <p>{responseMessage}</p>}
       </form>
+      </div>
     </>
   );
 };

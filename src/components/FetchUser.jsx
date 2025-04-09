@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Toaster, toast} from "sonner";
+import Navbar from "./NavBar";
 
 
 const FetchUser = () => {
@@ -9,8 +10,7 @@ const FetchUser = () => {
   const [error, setError] = useState(null);
 
   const fetchUser = () => {
-    const token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSYXZpIiwiaWF0IjoxNzQzNzYxNzQ5LCJleHAiOjE3NDM3NjUzNDl9.l1tuFDJqS9hvu70EDejqo2mRdb_oPNvF4o4kjgsPTdo";
-
+    const token = sessionStorage.getItem("token");
     setLoading(true);
     setError(null);
 
@@ -42,6 +42,7 @@ const FetchUser = () => {
 
   return (
     <>
+    <Navbar></Navbar>
       <Toaster />
       <p>Fetch User Details</p>
 
