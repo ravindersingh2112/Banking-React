@@ -13,7 +13,10 @@ const Navbar = () => {
         <li><Link to="/home" style={styles.link}>Home</Link></li>
         <li><Link to="/create" style={styles.link}>Create Account</Link></li>
         <li><Link to="/fetch" style={styles.link}>Fetch data</Link></li>
-       
+        <li><Link to="/deposit" style={styles.link}>Deposit Fund </Link></li>
+        <li><Link to="/withdrawal" style={styles.link}>Withdrawal </Link></li>
+        
+        
       </ul>
     </nav>
   );
