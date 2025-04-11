@@ -39,6 +39,7 @@ const Login = () => {
 
       })
       .then((data) => {
+        console.log("data",data);
         setToken(data.token);
         sessionStorage.setItem("token", data.token);
         setFormData({username:"",password:""})

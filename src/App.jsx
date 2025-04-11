@@ -7,6 +7,7 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Deposit from './components/Deposit'
 import Withdrawl from './components/Withdrawl'
+import UpdateUser from './components/UpdateUser'
 
 
 
@@ -29,6 +30,7 @@ function App() {
     <Route path="/home" element={<Home/>}></Route>
     <Route path="/deposit" element={<Deposit/>}></Route>
     <Route path="/withdrawal" element={<Withdrawl/>}></Route>
+    <Route path="/update" element={<UpdateUser/>}></Route>
 
     </Routes>
       </Router>

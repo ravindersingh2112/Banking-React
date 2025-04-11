@@ -53,8 +53,8 @@ const CreateUser = () => {
     <>
     <Navbar></Navbar>
     <Toast/>
-    
-    <div style={{ marginTop: "80px" }}>
+    <div className="content-center">
+    <div style={{ marginTop: "80px"}}>
       <h2>Create User </h2>
       <form onSubmit={handleSubmit}>
         <label>Id:</label>{" "}
@@ -102,6 +102,7 @@ const CreateUser = () => {
 
         {responseMessage && <p>{responseMessage}</p>}
       </form>
+      </div>
       </div>
     </>
   );

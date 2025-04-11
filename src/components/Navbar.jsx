@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+  const logout=()=>{
+    sessionStorage.clear();
+    window.location.href = "/";
+  }
+
   return (
     <nav style={styles.nav}>
       <div style={styles.logo}>
@@ -15,7 +21,9 @@ const Navbar = () => {
         <li><Link to="/fetch" style={styles.link}>Fetch data</Link></li>
         <li><Link to="/deposit" style={styles.link}>Deposit Fund </Link></li>
         <li><Link to="/withdrawal" style={styles.link}>Withdrawal </Link></li>
+        <li><Link to="/update" style={styles.link}>Update User</Link></li>
         
+        <button onClick={logout}>Logout</button>
         
       </ul>
     </nav>
