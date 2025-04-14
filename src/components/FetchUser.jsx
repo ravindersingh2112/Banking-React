@@ -44,8 +44,8 @@ const FetchUser = () => {
     <>
     <Navbar></Navbar>
       <Toaster />
+      <div className="content-center" >
       <p>Fetch User Details</p>
-
       <input
         type="text"
         value={userId}
@@ -66,6 +66,7 @@ const FetchUser = () => {
           <p>Phone Number: {users.phoneNumber}</p>
         </div>
       )}
+      </div>
     </>
   );
 };

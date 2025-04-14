@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Toaster, toast} from "sonner";
 import Toast from "./Toast";
+import Navbar from "./NavBar";
 
 const Deposit = () => {
   const [userId, setUserId] = useState("");
@@ -70,8 +71,10 @@ const Deposit = () => {
       });
   };
   return (
-    <>
-      <div>
+    <>  
+
+      <Navbar/>
+      <div className="content-center">
         <Toast/>
         <h2>Deposit Funds</h2>
         <input

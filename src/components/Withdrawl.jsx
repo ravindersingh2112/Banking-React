@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Toaster, toast} from "sonner";
 import Toast from "./Toast";
+import Navbar from "./NavBar";
 const Withdrawl = () => {
   const [userId, setUserId] = useState("");
   const [user, setUser] = useState(null);
@@ -69,7 +70,8 @@ const Withdrawl = () => {
   };
   return (
     <>
-      <div>
+    <Navbar/>
+      <div className="content-center">
               
     <Toast/>
         <h2>WithDrawl Funds</h2>

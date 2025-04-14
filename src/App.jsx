@@ -8,6 +8,7 @@ import Home from './components/Home'
 import Deposit from './components/Deposit'
 import Withdrawl from './components/Withdrawl'
 import UpdateUser from './components/UpdateUser'
+import Transfer from './components/Transfer'
 
 
 
@@ -31,6 +32,7 @@ function App() {
     <Route path="/deposit" element={<Deposit/>}></Route>
     <Route path="/withdrawal" element={<Withdrawl/>}></Route>
     <Route path="/update" element={<UpdateUser/>}></Route>
+    <Route path="/transfer" element={<Transfer/>}></Route>
 
     </Routes>
       </Router>

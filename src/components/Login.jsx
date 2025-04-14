@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Toast from "./Toast";
+import { toast } from "sonner";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -43,15 +45,21 @@ const Login = () => {
         setToken(data.token);
         sessionStorage.setItem("token", data.token);
         setFormData({username:"",password:""})
+        toast.success("Login Succesful")
+
+
         window.location.href = "/home";
       })
       .catch((error) => {
         setErrorMsg(error.message || "Login Failed");
+        toast.error("Bad Credentials");
       });
   }
 
   return(
     <>
+    <Toast/>
+    <div className="content-center">
     <h2>Login</h2>
 
     <form onSubmit={handleSubmit}>
@@ -82,6 +90,12 @@ const Login = () => {
     <br/>
    <div>
     Dont have an account? <Link to="/signup">Signup</Link>
+   </div>
+
+   <div>
+   {errorMsg && <p style={{ color: "red" }}>{errorMsg}</p>}
+
+   </div>
    </div>
     </>
   )

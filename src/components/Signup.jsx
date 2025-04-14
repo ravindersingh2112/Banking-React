@@ -56,6 +56,7 @@ const Signup = () => {
 
       return(
         <>
+        <div className="content-center">
         <h2>Sign up</h2>
 
         <form onSubmit={handleSubmit}>
@@ -117,7 +118,7 @@ const Signup = () => {
         <div>
             Already an user? <Link to="/" >Login</Link>
                     </div>
-
+            </div>
         </>
       )
 };

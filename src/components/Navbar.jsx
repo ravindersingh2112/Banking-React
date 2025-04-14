@@ -21,7 +21,9 @@ const Navbar = () => {
         <li><Link to="/fetch" style={styles.link}>Fetch data</Link></li>
         <li><Link to="/deposit" style={styles.link}>Deposit Fund </Link></li>
         <li><Link to="/withdrawal" style={styles.link}>Withdrawal </Link></li>
+
         <li><Link to="/update" style={styles.link}>Update User</Link></li>
+        <li><Link to="/transfer" style={styles.link}>Transfer Funds</Link></li>
         
         <button onClick={logout}>Logout</button>
         

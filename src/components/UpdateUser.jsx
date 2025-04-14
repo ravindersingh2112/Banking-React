@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Toast from "./Toast";
 import {Toaster, toast} from "sonner";
+import Navbar from "./NavBar";
 const UpdateUser = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -84,7 +85,9 @@ const UpdateUser = () => {
 
   return (
     <>
-    <Toast/>
+    <Navbar/>
+    <div className="content-center">    
+      <Toast/>
       <h1>Update User details</h1>
       <input
         type="text"
@@ -136,6 +139,8 @@ const UpdateUser = () => {
           </form>
         </div>
       )}
+      
+</div>
     </>
   );
 };
