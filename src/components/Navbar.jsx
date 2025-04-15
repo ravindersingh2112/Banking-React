@@ -24,6 +24,8 @@ const Navbar = () => {
 
         <li><Link to="/update" style={styles.link}>Update User</Link></li>
         <li><Link to="/transfer" style={styles.link}>Transfer Funds</Link></li>
+        <li><Link to="/delete" style={styles.link}>Delete Account</Link></li>
+
         
         <button onClick={logout}>Logout</button>
         

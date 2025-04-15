@@ -9,19 +9,12 @@ import Deposit from './components/Deposit'
 import Withdrawl from './components/Withdrawl'
 import UpdateUser from './components/UpdateUser'
 import Transfer from './components/Transfer'
-
-
-
-
-
-
+import Delete from './components/Delete'
 
 
 function App() {
-
   return (
     <>
-
     <Router>
     <Routes>
     <Route path="/create" element={<CreateUser/>}></Route>
@@ -33,7 +26,7 @@ function App() {
     <Route path="/withdrawal" element={<Withdrawl/>}></Route>
     <Route path="/update" element={<UpdateUser/>}></Route>
     <Route path="/transfer" element={<Transfer/>}></Route>
-
+    <Route path='/delete' element={<Delete/>}></Route>
     </Routes>
       </Router>
 
